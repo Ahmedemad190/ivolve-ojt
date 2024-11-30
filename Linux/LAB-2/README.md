@@ -1,4 +1,4 @@
-# create a  bash script to chekc the disk usage for the root file system 
+# create a  bash script to chekc the disk usage for the root file system the script should run daily
 
 
 
@@ -44,7 +44,7 @@ password       your_email_password
 #!/bin/bash
 
 # Set the threshold percentage
-THRESHOLD=5
+THRESHOLD=10
 
 # Get the current disk usage percentage for the root filesystem
 USAGE=$(df / | grep / | awk '{ print $5 }' | sed 's/%//g')
