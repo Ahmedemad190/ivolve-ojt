@@ -38,3 +38,23 @@ password       your_email_password
 2. Enable 2-Step Verification (if not already enabled).
 3. Scroll to App Passwords and create a new password for "Mail" and your device.
 4. Replace your password in the ~/.msmtprc file with the App Password.
+5. copy the code and add into ~/.msmtprc replace it with email_password
+# the main script 
+```
+#!/bin/bash
+
+# Set the threshold percentage
+THRESHOLD=5
+
+# Get the current disk usage percentage for the root filesystem
+USAGE=$(df / | grep / | awk '{ print $5 }' | sed 's/%//g')
+
+# Check if the current usage exceeds the threshold
+if [ "$USAGE" -gt "$THRESHOLD" ]; then
+    # Create the email content
+    echo -e "To: <enter_email>\nFrom: <enter_email>\nSubject: Disk Space Alert\n\nThe root filesystem usage is at ${USAGE}% which exceeds the threshold of ${THRESHOLD}%." > /tmp/disk_alert.txt
+
+    # Send the email using msmtp
+    msmtp --debug --from=default -t < /tmp/disk_alert.txt
+fi
+```
