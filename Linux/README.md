@@ -1,1 +1,1 @@
-Text that is not a quote
+TEXT that is not a quote
