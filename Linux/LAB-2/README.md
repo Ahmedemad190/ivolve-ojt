@@ -59,3 +59,8 @@ if [ "$USAGE" -gt "$THRESHOLD" ]; then
     msmtp --debug --from=default -t < /tmp/disk_alert.txt
 fi
 ```
+
+# The output should be like that 
+![image](https://github.com/user-attachments/assets/45dda54c-54e3-414b-8ca1-95f506e78933) 
+
+
