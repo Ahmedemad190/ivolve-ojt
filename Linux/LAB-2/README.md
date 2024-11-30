@@ -32,7 +32,7 @@ password       your_email_password
 > change <your_email@gmail.com> with your email
 > change <your_email@gmail.com> with ur email
 > change <your_email_password> with ur password
-> [!IMPORTANT]
+[!IMPORTANT]
 > you cannot add ur password as plaintext
 1. Go to your Google Account Security Page.
 2. Enable 2-Step Verification (if not already enabled).
