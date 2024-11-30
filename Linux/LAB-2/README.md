@@ -32,5 +32,9 @@ password       your_email_password
 > change <your_email@gmail.com> with your email
 > change <your_email@gmail.com> with ur email
 > change <your_email_password> with ur password
-ع ش
-شش
+> [!IMPORTANT]
+> you cannot add ur password as plaintext
+1. Go to your Google Account Security Page.
+2. Enable 2-Step Verification (if not already enabled).
+3. Scroll to App Passwords and create a new password for "Mail" and your device.
+4. Replace your password in the ~/.msmtprc file with the App Password.
