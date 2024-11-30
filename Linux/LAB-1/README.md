@@ -8,4 +8,5 @@ you need to assoicate the user to a group : ![image](https://github.com/user-att
 
 then the last step to add the user u have created to the /etc/suderos.d , you need to specify a command to the user can only execute this command without prompting to enter a passowrd ![image](https://github.com/user-attachments/assets/b0b4399a-fb32-499e-95f1-2f966f57b19a)
 
-test the pervious commands : ![Uploading image.png…]()
+test the pervious commands : ![image](https://github.com/user-attachments/assets/0a3ad414-73d8-4c31-a104-b2410f3f23c7)
+
