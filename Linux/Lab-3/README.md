@@ -1,1 +1,1 @@
-# confgiure dns to act as dns server 
+# confgiure dns to act as DNS server 
