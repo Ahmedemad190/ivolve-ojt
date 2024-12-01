@@ -59,6 +59,14 @@ if [ "$USAGE" -gt "$THRESHOLD" ]; then
     msmtp --debug --from=default -t < /tmp/disk_alert.txt
 fi
 ```
+- Edit crontab to make the script run daily
+  ```
+  crontab -e
+  ```
+  and add the following to make script runs daily at 5:00 pm
+  ```
+  0 17 * * * /path/to/script
+  ```
 - to test the script
 ```
 bash <script_path>
