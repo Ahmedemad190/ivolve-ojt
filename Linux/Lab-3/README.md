@@ -23,6 +23,7 @@ options {
         8.8.8.8;  forwoard the dns query if the local dns can't resolve it to 8.8.8.8 
     };
 };
-``
+```
+`- create the zone file at /etc/bind/zones/<choose_name> 
 
 
