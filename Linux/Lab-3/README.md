@@ -39,3 +39,29 @@ zone "ivolve.local" {
     file "/etc/bind/zones/<file_name>";
 };
 ```
+add this confgurtion to the file u have created *zone_file* edit it based on ur confgrution 
+replace 192.168.1.12
+```
+;
+; BIND data file for ivolve.local
+;
+$TTL    604800
+@       IN      SOA     ivolve.local. admin.ivolve.local. (
+                          2024113001 ; Serial
+                          604800     ; Refresh
+                          86400      ; Retry
+                          2419200    ; Expire
+                          604800 )   ; Negative Cache TTL
+
+; Name servers
+@       IN      NS      ns1.ivolve.local.
+ns1     IN      A       192.168.1.12
+
+; A record for ivolve.local
+ivolve.local.   IN      A       192.168.1.12
+
+; Subdomains
+www     IN      A       192.168.1.12
+test    IN      A       192.168.1.12
+
+```
