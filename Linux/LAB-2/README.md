@@ -63,7 +63,11 @@ fi
   ```
   crontab -e
   ```
-  and add the following to make script runs daily at 5:00 pm
+  - check the crontab job
+  ```
+crontab -l
+  ```
+  - and add the following to make script runs daily at 5:00 pm
   ```
   0 17 * * * /path/to/script
   ```
