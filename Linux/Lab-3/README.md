@@ -65,3 +65,7 @@ www     IN      A       192.168.1.12
 test    IN      A       192.168.1.12
 
 ```
+- test the confurtion
+```
+dig domain @<bind9_server_ip>
+```
