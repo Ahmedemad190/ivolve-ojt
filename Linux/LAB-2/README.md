@@ -63,9 +63,10 @@ fi
   ```
   crontab -e
   ```
-  - check the crontab job
+- check the crontab job
   ```
-crontab -l
+  crontab -l
+
   ```
 
   ```
