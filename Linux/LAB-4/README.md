@@ -22,6 +22,11 @@ lsblk
 fdisk /dev/sda
 ```
 use n option to create a new partion then +5G to assgin 5 GB of the disk to the partion repeat the procces for the all partions 
+
+- format the disk 
+```
+mkfs.ext4 /dev/sda
+```
 then create the mount point 
 ```
 mkdir /mnt/disk1
