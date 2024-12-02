@@ -64,4 +64,33 @@ sudo lvextend -L +3G /dev/my_vg/my_lv
 ```
 sudo resize2fs /dev/my_vg/my_lv
 ```
- 
+ - to make a presetint mount
+1. print the uuid and the mount points
+```
+lsblk --fs
+```
+copy the required info and edit /etc/fstab it should look like that 
+
+```
+ /etc/fstab: static file system information
+#
+# Use 'blkid' to print the universally unique identifier for a device;
+# this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system>                         <mount point>   <type>  <options>               <dump>  <pass>
+
+# Root filesystem
+UUID=05e5f40e-9aaf-4dbb-a7c4-d2092150d207 /               ext4    errors=remount-ro       0       1
+
+# Boot EFI partition
+UUID=73AE-9FB0                          /boot/efi       vfat    umask=0077,nofail        0       1
+
+# Swap file
+/swapfile                               none            swap    sw,nofail                0       0
+
+# Additional ext4 partitions
+UUID=f3a8cfbd-12ae-4050-a5f9-c406fc8d347c /mnt/lvm      ext4    defaults,nofail          0       0
+UUID=ffaae7d7-b433-4235-938e-88e35b2a2cd9 /data         ext4    defaults,nofail          0       0
+```
+
