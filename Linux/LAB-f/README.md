@@ -1,4 +1,4 @@
-# enable SSH netween two machines 
+# enable SSH between two machines 
 - First create the keypair
 ```
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa 
