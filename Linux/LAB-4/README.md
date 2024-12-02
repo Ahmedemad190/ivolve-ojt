@@ -17,3 +17,16 @@ lsblk
 ```
 - it should look like that 
 ![image](https://github.com/user-attachments/assets/10d62e28-86fb-4d5a-a459-9a7940f288a5)
+- then you need partioning the disk
+```
+fdisk /dev/sda
+```
+use n option to create a new partion then +5G to assgin 5 GB of the disk to the partion repeat the procces for the all partions 
+then create the mount point 
+```
+mkdir /mnt/disk1
+```
+- mount the disk to the directory using
+```
+mount /dev/sda /mnt/disk1
+```
