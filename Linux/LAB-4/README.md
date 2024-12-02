@@ -35,3 +35,33 @@ mkdir /mnt/disk1
 ```
 mount /dev/sda /mnt/disk1
 ```
+- now the upcomming step is to create PV
+```
+pvcreate /dev/sda
+```
+- create VG
+```
+vgcreate my_vg /dev/sda
+```
+- Create LV with 5GB 
+```
+sudo lvcreate -L 5G -n my_lv my_vg
+
+```
+- create pv for /dev/sdb the one which u will use it for extenstion
+```
+sudo pvcreate /dev/sdb3
+```
+- include the vg (my_vg) to /dev/sdb3
+```
+sudo vgextend my_vg /dev/sdb3
+```
+- Extend the LV with 3GB
+```
+sudo lvextend -L +3G /dev/my_vg/my_lv
+```
+- Resize the filesystem to utilize the new space
+```
+sudo resize2fs /dev/my_vg/my_lv
+```
+ 
