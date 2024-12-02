@@ -93,4 +93,11 @@ UUID=73AE-9FB0                          /boot/efi       vfat    umask=0077,nofai
 UUID=f3a8cfbd-12ae-4050-a5f9-c406fc8d347c /mnt/lvm      ext4    defaults,nofail          0       0
 UUID=ffaae7d7-b433-4235-938e-88e35b2a2cd9 /data         ext4    defaults,nofail          0       0
 ```
+> [!IMPORTANT]
+> the nofail option is if u made a mistake during the confugrtion the system will boot regredless the error
+- test the confgurtion with
+```
+sudo mount -a
+```
+
 
