@@ -15,3 +15,5 @@ Before proceeding, ensure that the 15GB disk is attached to your VM. You can che
 ```
 lsblk
 ```
+- it should look like that 
+![image](https://github.com/user-attachments/assets/10d62e28-86fb-4d5a-a459-9a7940f288a5)
