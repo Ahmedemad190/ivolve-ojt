@@ -1,3 +1,4 @@
+# Install ansible and run Playbooks
 # First you need to install ansible in your master machine in which u will push the playbooks
 - for me i have create two amazon linux machines
 on the master node do as follwoing
