@@ -44,6 +44,7 @@ ssh <manged_node_ip>
 # the next step is ansible work 
 - run a simple playbook
 ```
+               <group_name>       
 ansible -i inventory web -a "df -h"
 ```
 - The output
