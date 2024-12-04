@@ -11,3 +11,7 @@ Create secert.yml : to store the text in a secert way
 ```
 ansible-vault encrypt secrets.yml
 ```
+- run
+```
+ansible-playbook playbook.yml --ask-vault-pass
+```
