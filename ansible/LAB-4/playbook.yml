@@ -1,6 +1,0 @@
---- 
-- name: Install Apache on Dynamic Inventory Hosts
-  hosts: tag_task_1
-  become: yes
-  roles:
-    - geerlingguy.apache
