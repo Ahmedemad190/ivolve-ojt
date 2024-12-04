@@ -1,0 +1,32 @@
+---
+- name: Install MySQL and Configure Database
+  hosts: web
+  become: true
+  vars_files:
+    -  secrets.yml
+
+  tasks:
+    - name: Install MySQL
+      yum:
+        name: mysql-server
+        state: present
+
+    - name: Ensure MySQL is running
+      service:
+        name: mysql
+        state: started
+        enabled: true
+
+    - name: Create ivolve database
+      mysql_db:
+        name: ivolve
+        state: present
+      notify: Restart MySQL
+
+    - name: Create MySQL user and grant privileges
+      mysql_user:
+        name: "{{ db_user }}"
+        password: "{{ db_password }}"
+        priv: "*.*:ALL"
+        host: "%"
+        state: present
