@@ -1,0 +1,5 @@
+[web]
+172.31.28.196  ansible_ssh_pass=P@$$w0rd
+[os]
+
+98.84.135.131  ansible_user=ubuntu ansible_ssh_private_key_file=/home/ec2-user/ansilbe-svr.pem
