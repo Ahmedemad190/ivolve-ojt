@@ -1,0 +1,9 @@
+---
+- name: Setup Jenkins, Docker, and OpenShift CLI
+  hosts: os
+  become: yes
+  remote_user: ubuntu
+  roles:
+     - jenkins
+     - docker
+     - openshift_cli
