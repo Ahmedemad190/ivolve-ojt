@@ -12,7 +12,9 @@ ansible-galaxy init roles/jenkins
 ```
 ansible-galaxy init roles/openshift_cli
 ```
+
 - create role for oc
+
 ```
 ansible-galaxy init roles/openshift_cli
 ```
