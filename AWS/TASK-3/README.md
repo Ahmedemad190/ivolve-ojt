@@ -26,7 +26,6 @@ systemctl start nginx
 systemctl enable nginx
 echo "Welcome to Nginx Server" > /usr/share/nginx/html/index.html
 ```
-
 - Launch Instance 2 (Apache)
 the same as the pervious but chosse the second public subnet u have created
 User Data for apache
@@ -49,13 +48,12 @@ then launch the instance
 6.Availability Zones: Add <Public_subnet_1> and <subnet_2> from the az buttons.
 
 # Configure Target Group:
-arget Type: Instance.
-Name: <Name>.
-Protocol: HTTP.
-Port: 80.
-Health Check: HTTP on /.
-Register targets: Add machines u have created the nginx and the apache
-
+- Target Type: Instance.
+- Name: <Name>.
+- Protocol: HTTP.
+- Port: 80.
+- Health Check: HTTP on /.
+- Register targets: Add machines u have created the nginx and the apache
 
 - Assign the target group to loadblancer
 copy the DNS name for the Loadblancer and test it 
