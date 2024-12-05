@@ -23,8 +23,9 @@ attach it to the vpc u have created and the security group
   ssh -i private/key/path ec2-user@<public-ec2-public-ip>
   ```
   9. then ssh into from the public to the private
-     ```
-ssh -i private/key/path ec2-user@<private-ec2-private-ip>
-     ```
 
-     ![image](https://github.com/user-attachments/assets/53f6d384-f6f9-41a6-9c99-a8f66b59efd9)
+```
+ssh -i private/key/path ec2-user@<private-ec2-private-ip>
+```
+
+![image](https://github.com/user-attachments/assets/53f6d384-f6f9-41a6-9c99-a8f66b59efd9)
