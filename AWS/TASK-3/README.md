@@ -52,7 +52,7 @@ then launch the instance
 - Name: <Name>.
 - Protocol: HTTP.
 - Port: 80.
-- Health Check: HTTP on /.
+- Health Check: HTTP on /
 - Register targets: Add machines u have created the nginx and the apache
 
 - Assign the target group to loadblancer
