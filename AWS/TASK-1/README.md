@@ -33,8 +33,5 @@ programmatic and console access and try to access EC2 and S3 from dev user
 7.create the dev-user 
 ![Screenshot 2024-12-05 095931](https://github.com/user-attachments/assets/52f744b4-68c3-47ee-b753-235ccebb4ee9)
 
-
-
-
-
-
+- Check dev-user persmissions
+![image](https://github.com/user-attachments/assets/477bec2b-5b01-4ca9-bd3a-0963b3377d0a)
