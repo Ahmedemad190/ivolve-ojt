@@ -31,7 +31,8 @@ programmatic and console access and try to access EC2 and S3 from dev user
 6.create the second user
 ![WhatsApp Image 2024-12-05 at 09 35 17_457ba44f](https://github.com/user-attachments/assets/097a9a7a-8eb6-4a96-8108-915654a34041)
 7.create the dev-user 
-![Uploading Screenshot 2024-12-05 095931.png…]()
+![Screenshot 2024-12-05 095931](https://github.com/user-attachments/assets/52f744b4-68c3-47ee-b753-235ccebb4ee9)
+
 
 
 
