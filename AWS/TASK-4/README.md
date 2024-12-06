@@ -26,5 +26,38 @@ aws s3api put-public-access-block --bucket <Bucket-name> --public-access-block-c
     }
   ]
 }
+```
+- Upload file to the bucket
+```
+aws s3 cp <local-file-path> s3://<your-bucket-name>/
+```
+![image](https://github.com/user-attachments/assets/a9e43263-0aca-4cb2-98cd-8b3c836d5af0)
+- Download from the bucket
+```
+aws s3 cp s3://<your-bucket-name>/<file-name> <destination-path>
+```
+- Enable versionning
+```
+aws s3api put-bucket-versioning --bucket <your-bucket-name> --versioning-configuration Status=Enabled
+```
+- Enable Logging
+for enable logging you need to create another bucket to store the logging logs and give it the required permissions
+1. create the bucket
+```
+aws s3api create-bucket --bucket <bucket-name> --region us-east-1
+```
+2. use a json file to enalbe logging
+- create the json file
+```
+{
+  "LoggingEnabled": {
+    "TargetBucket": "<bucket-name>",
+    "TargetPrefix": "logs/"
+  }
+}
 
+```
+3. enable logging
+```
+aws s3api put-bucket-logging --bucket <bucket-name> --bucket-logging-status file://<path-for-json-file>
 ```
