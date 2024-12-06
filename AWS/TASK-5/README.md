@@ -1,1 +1,16 @@
  # Lab 16: Serverless Application Development Objective: Build a serverless application using AWS Lambda, API Gateway, and DynamoDB.
+1 - First of all we need to create aws role permission policy should be 
+![image](https://github.com/user-attachments/assets/7c84f5bc-1e95-4b44-a00a-be2711e1cc0e)
+
+which means taht lambda using this role to perfrom any action on Dynamodb which will be create next 
+- Next step to create lambda function
+- choose the name and the run time then click create function
+![image](https://github.com/user-attachments/assets/a82e4297-0314-4527-98da-5300b26f5a31)
+
+attach it to the role u have created 
+![image](https://github.com/user-attachments/assets/9b716cd6-6435-4d7f-9959-34e297bd0469)
+- Upload the function as a zip file to lambda
+- Next step is to create the Dynamodb table
+Dynamodb>Tables>Create table
+![image](https://github.com/user-attachments/assets/45e12acb-e566-4240-b842-295c1fc4f5a7)
+## API gateway section 
