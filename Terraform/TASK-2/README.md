@@ -76,11 +76,6 @@ resource "aws_route_table_association" "Assoic" {
   route_table_id = aws_route_table.PublicRT.id
 }
 
-
-
-
-
-
 Security Groups
 resource "aws_security_group" "web_SG" {
   name = "web_SRV_SG"
