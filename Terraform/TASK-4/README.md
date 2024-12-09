@@ -40,3 +40,10 @@ This Terraform configuration sets up a basic AWS infrastructure including public
 ### EC2 Instances
 - **Nginx Server**: An EC2 instance in the public subnet running Nginx.
 - **Apache Server**: An EC2 instance in the private subnet running Apache.
+
+in the begining we need to import the resource we have create wwhich is the vpc 
+by 
+```              <resource.resorucename> <resource_id>
+terraform import aws_vpc.exist vpc-0601da0234c315dca 
+```
+- هى 
