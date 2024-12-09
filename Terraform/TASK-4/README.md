@@ -55,3 +55,4 @@ resource "aws_vpc" "exist" {
     }
 }
 ```
+![image](https://github.com/user-attachments/assets/e46eefb3-aedc-4eb6-80f0-bd90d0a1ef1d)
