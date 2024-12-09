@@ -25,6 +25,7 @@ tags = {
 
 try to http://<public_ec2> 
 
+u should see the welcome page for nginx !
 
 
 
