@@ -46,4 +46,12 @@ by
 ```              <resource.resorucename> <resource_id>
 terraform import aws_vpc.exist vpc-0601da0234c315dca 
 ```
-- هى 
+
+- fetch teh vpc data
+```
+resource "aws_vpc" "exist" {
+    tags = {
+      Name = "ivolve-20" #the name of the vpc in the aws console
+    }
+}
+```
