@@ -132,9 +132,12 @@ terraform init
 
 ```
 2.Apply changes
+
 ```
 terraform apply 
+
 ```
+
 3.verify resources :
 check AWS mangemnet console
 - Notes
