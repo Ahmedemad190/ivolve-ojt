@@ -113,5 +113,117 @@ resource "aws_nat_gateway" "nat" {
     Name = "NAT GATEWAY"
   }
 }
+![image](https://github.com/user-attachments/assets/76b088fa-e48b-4d6f-94e8-e9ce44dec1bd)
 
 ```
+- the route table
+determine the destiontion for any resource use to access internet
+cidr_block = "0.0.0.0/0" it means anything have no route will go to internet gateway
+gateway_id = aws_internet_gateway.igw.id makes every resource in public subnet access internet through internet gateway 
+```
+resource "aws_route_table" "PublicRT" {
+  vpc_id = aws_vpc.exist.id
+  route  {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.igw.id
+  }
+  tags = {
+    Name = "Public-task-final"
+  }
+}
+```
+attach the public subnet to the route table 
+```
+resource "aws_route_table_association" "public_subnet_assoicate" {
+  subnet_id = aws_subnet.Public_1.id
+  route_table_id = aws_route_table.PublicRT.id
+}
+```
+so the servers in this subnet can accesss internet 
+```
+resource "aws_route_table" "private_route_table" {
+  vpc_id = aws_vpc.exist.id
+  route {
+    cidr_block = "0.0.0.0/0"
+    nat_gateway_id = aws_nat_gateway.nat.id
+  }
+  tags ={
+    Name = "private-route-table-Final"
+  }
+}
+```
+cidr_block = "0.0.0.0/0" every traffic will go to nat gateway to access intrnet 
+- assoicate the private table to the route table
+```
+resource "aws_route_table_association" "Private_assoc" {
+  subnet_id = aws_subnet.Private_2.id
+  route_table_id = aws_route_table.private_route_table.id
+}
+```
+associate the private subnet to the route table so the servers can use the nat gateway to access internet 
+the final stage is creating the security group for ec2 in public subnet and private subnet 
+```
+
+resource "aws_security_group" "public_sg" {
+  vpc_id = aws_vpc.exist.id
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  tags = {
+    Name = "Public SG"
+  }
+}
+```
+it's a basic security grpup allow ssh and http and https from anywhere in internet 
+the private security group 
+```
+resource "aws_security_group" "private_sg" {
+  vpc_id = aws_vpc.exist.id
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = [aws_subnet.Public_1.cidr_block]
+  }
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  tags = {
+    Name = "Private SG"
+  }
+}
+```
+cidr_blocks = [aws_subnet.Public_1.cidr_block] 
+this is an important part which means that allow the servers in the private subnet ot communicate with servers in aws_subnet.Public_1 only with cidr=[10.0.0.0/24] 
+to verify ur work open the nginx server and try to through ssh or any alternive way 
+and type the follwoing 
+```
+ curl 10.0.2.107  | grep "apache"
+```
+10.0.2.107 is the private  ip of the apcahe server we have create ealier 
+u should see someting like that 
+![image](https://github.com/user-attachments/assets/c08ac15f-a1ba-4301-b0c7-8bf54c63dda9)
