@@ -22,3 +22,9 @@ tags = {
   Name = "Public_insatnce_module-${count.index }"
 }
 } 
+
+try to http://<public_ec2> 
+
+
+
+
