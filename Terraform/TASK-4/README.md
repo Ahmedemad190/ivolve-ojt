@@ -227,3 +227,10 @@ and type the follwoing
 10.0.2.107 is the private  ip of the apcahe server we have create ealier 
 u should see someting like that 
 ![image](https://github.com/user-attachments/assets/c08ac15f-a1ba-4301-b0c7-8bf54c63dda9)
+
+
+
+after terraform apply u should see that  
+![image](https://github.com/user-attachments/assets/bcc1739b-484b-4c2d-87bb-8d7e82fecf78)
+
+check the output file 
