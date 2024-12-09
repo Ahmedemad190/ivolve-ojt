@@ -19,3 +19,6 @@ in this subnet create the ec2 with a security group allow and internet gateway a
 
 verify ur configurtion with this email 
 ![image](https://github.com/user-attachments/assets/500b1935-ac5c-4310-bfd0-cd933b331dae)
+
+the s3 bucket 
+![image](https://github.com/user-attachments/assets/85dd6c3a-fd15-446e-a8cc-6f88926198c5)
