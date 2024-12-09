@@ -55,4 +55,63 @@ resource "aws_vpc" "exist" {
     }
 }
 ```
-![image](https://github.com/user-attachments/assets/e46eefb3-aedc-4eb6-80f0-bd90d0a1ef1d)
+![image](https://github.com/user-attachments/assets/e46eefb3-aedc-4eb6-80f0-bd90d0a1ef1d) 
+
+- the next step is createing the public subnet in the vpc we have imported perivously
+```
+resource "aws_subnet" "Public_1" {
+  vpc_id = aws_vpc.exist.id
+  cidr_block = "10.0.0.0/24"
+  map_public_ip_on_launch = true #mean every ec2 in this subnet will not need to asspicate_public_ip it takes public ip automatic
+  availability_zone = "us-east-1a"
+  tags = {
+    Name = "Public-sub-TASK-final"
+  }
+}
+```
+do the same for the private subnet 
+```
+resource "aws_subnet" "Private_2" {
+  vpc_id = aws_vpc.exist.id
+  cidr_block = "10.0.2.0/24"
+  availability_zone = "us-east-1a"
+  map_public_ip_on_launch = false
+  tags = {
+    Name = "Private-subnet-TASK-FINAL"
+  }
+}
+```
+- then create the innternet gateway
+the role of the internet gateway makes ur vpc connected to internet 
+```
+resource "aws_internet_gateway" "igw" {
+  vpc_id = aws_vpc.exist.id
+  tags = {
+    Name = "Internet_gateway"
+  }
+}
+```
+- then create the EIP
+the pramter "domain="vpc" " means the eip associte to vpc 
+```
+
+resource "aws_eip" "nat_eip" {
+  domain = "vpc"
+  tags = {
+    Name = "NAT GATEWAY_EIP"
+  }
+}
+```
+- Create nat gateway
+allocation_id = aws_eip.nat_eip.id #assoicate the NAT gateway with EIP we have create earlier
+subnet_id = aws_subnet.Public_1.id # it means it place the nat gateway into the public subnet so the nat gateway can access internet with EIP 
+```
+resource "aws_nat_gateway" "nat" {
+  allocation_id = aws_eip.nat_eip.id
+  subnet_id = aws_subnet.Public_1.id
+  tags = {
+    Name = "NAT GATEWAY"
+  }
+}
+
+```
