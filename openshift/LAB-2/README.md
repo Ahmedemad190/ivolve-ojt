@@ -33,3 +33,10 @@ mysql -u root -p
 ![image](https://github.com/user-attachments/assets/ee3d1c63-fda0-4eda-a0c6-9b0cf74621ae)
 
 the password is the password u create it in the yaml file
+
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/d01b69a2-a1ae-4ff7-bbea-b2cffade5c5a)
