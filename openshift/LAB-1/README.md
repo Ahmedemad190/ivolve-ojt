@@ -5,3 +5,10 @@
 
 
 ![image](https://github.com/user-attachments/assets/3809cde8-4db0-484b-b759-7a330276efa7)
+
+then to test it locally 
+![image](https://github.com/user-attachments/assets/131499d2-7c5f-43a5-bfba-282359940ece)
+
+u should something similar to that 
+
+![image](https://github.com/user-attachments/assets/0501ed4f-478e-46c4-ae33-671994fdfa71)
