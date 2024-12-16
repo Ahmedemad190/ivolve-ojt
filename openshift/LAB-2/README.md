@@ -9,3 +9,10 @@ StatefulSet: Pods have a stable identity (a predictable name, e.g., my-app-0, my
 - 3. Storage
 Deployment: Pods usually use ephemeral storage. Data is lost when a pod is deleted unless external storage (e.g., PersistentVolumes) is explicitly used.
 StatefulSet: Each pod can have its own dedicated PersistentVolume. Volumes are uniquely associated with each pod and retain data even if the pod is deleted or rescheduled.
+
+u can find the yaml files i've used 
+to execute the yaml file 
+```
+kubectl apply -f <****.yml>
+```
+![image](https://github.com/user-attachments/assets/12e67757-90e3-4b6f-8353-b74e29d41153)
