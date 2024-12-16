@@ -16,3 +16,7 @@ u should something similar to that
 - rolling back steps 
 update the image
 ![image](https://github.com/user-attachments/assets/adc62614-d068-431b-bcea-4855c0b9046d)
+
+
+
+![image](https://github.com/user-attachments/assets/8b0819cb-5e52-41c9-82cc-e15aa18ccbd9)
