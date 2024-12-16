@@ -35,8 +35,9 @@ mysql -u root -p
 the password is the password u create it in the yaml file
 
 
-
-
-
-
 ![image](https://github.com/user-attachments/assets/d01b69a2-a1ae-4ff7-bbea-b2cffade5c5a)
+
+delete the pod to check the statfulset
+
+![image](https://github.com/user-attachments/assets/bb1dfc85-6275-4306-9c72-3e932b3590a0)
+
