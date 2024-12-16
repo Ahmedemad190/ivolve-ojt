@@ -15,4 +15,21 @@ to execute the yaml file
 ```
 kubectl apply -f <****.yml>
 ```
-![image](https://github.com/user-attachments/assets/12e67757-90e3-4b6f-8353-b74e29d41153)
+![image](https://github.com/user-attachments/assets/12e67757-90e3-4b6f-8353-b74e29d41153) 
+
+
+![image](https://github.com/user-attachments/assets/6bef6be6-4c82-4cae-91c0-16108488f120)
+
+then exec into one of the pods by 
+```
+kubectl exec -it mysql-0 -- bash
+
+```
+then enter Database credentials 
+```
+mysql -u root -p 
+```
+
+![image](https://github.com/user-attachments/assets/ee3d1c63-fda0-4eda-a0c6-9b0cf74621ae)
+
+the password is the password u create it in the yaml file
