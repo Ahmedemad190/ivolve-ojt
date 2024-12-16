@@ -12,3 +12,5 @@ then to test it locally
 u should something similar to that 
 
 ![image](https://github.com/user-attachments/assets/0501ed4f-478e-46c4-ae33-671994fdfa71)
+
+- rolling back steps 
