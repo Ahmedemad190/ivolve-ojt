@@ -30,3 +30,5 @@ kubectl get pods
 ```
 
 ![sql5](https://github.com/user-attachments/assets/feb8b27d-fb1e-48da-becc-0eeb7f9f901c)
+
+then delete the pod and rebeate the pervious steps
