@@ -50,3 +50,8 @@ then create nework-policy.yml
 to restricts traffic to the NGINX pods only from other pods in the same namespace.
 ![image](https://github.com/user-attachments/assets/e8068469-1b9b-4f0d-a546-95e399ad218f)
 
+Enable ingress controller 
+```
+minikube addons enable ingress
+```
+
