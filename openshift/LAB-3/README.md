@@ -8,3 +8,7 @@ apply it with
 ```
 kubectl apply -f <>
 ```
+then create the pvc 
+
+![image](https://github.com/user-attachments/assets/b67a2dd4-a75a-4d90-b5dd-5de141e45f8d)
+
