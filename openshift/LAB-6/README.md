@@ -62,3 +62,14 @@ reterive the cluster ip to place it in /etc/hosts  through
 minikube ip
 ```
 ![image](https://github.com/user-attachments/assets/0909becd-472d-498a-94d1-c64ac31f5c46)
+
+add this ip into /etc/hosts 
+```
+sudo vim /etc/hosts
+```
+add the ip following by the host u want to search for 
+![image](https://github.com/user-attachments/assets/ed79b35f-f2c5-43fc-a2cf-bdb5bc4d07a0)
+
+
+then  
+![image](https://github.com/user-attachments/assets/97689493-9fa0-48c5-a1cb-efc2d607a36f)
