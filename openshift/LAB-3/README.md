@@ -12,3 +12,11 @@ then create the pvc
 
 ![image](https://github.com/user-attachments/assets/b67a2dd4-a75a-4d90-b5dd-5de141e45f8d)
 
+apply it with 
+
+```
+kubectl apply -f <>
+```
+
+![image](https://github.com/user-attachments/assets/af780385-b7a7-46c0-8919-fd9eb4e86d64)
+
