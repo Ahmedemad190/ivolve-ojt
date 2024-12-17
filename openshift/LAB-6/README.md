@@ -8,3 +8,22 @@ then built the image
 ```
 docker build -t 3omda1/static-website:latest .
 ```
+verify the image is existed 
+
+![image](https://github.com/user-attachments/assets/39a6dac0-55e4-4ab7-a609-38eaad5b8427)
+
+then login in docker through 
+```
+docker login <user_name>
+```
+then it will prompt u to enter the password
+
+![image](https://github.com/user-attachments/assets/03784dea-5bf0-48f8-b1a5-f07c617fda93)
+
+
+then push the image 
+```
+docker push 3omda1/static-website
+```
+then create the deploymnet 
+![image](https://github.com/user-attachments/assets/41aa312c-328f-4d87-8c3a-e8d156beffa0)
