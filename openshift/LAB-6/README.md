@@ -57,3 +57,8 @@ minikube addons enable ingress
 then create the ingress.yml to route the traffic 
 ![image](https://github.com/user-attachments/assets/e985c8bb-6e34-4ec0-903e-ccd9fa171e47)
 
+reterive the cluster ip to place it in /etc/hosts  through 
+```
+minikube ip
+```
+![image](https://github.com/user-attachments/assets/0909becd-472d-498a-94d1-c64ac31f5c46)
