@@ -26,4 +26,23 @@ then push the image
 docker push 3omda1/static-website
 ```
 then create the deploymnet 
-![image](https://github.com/user-attachments/assets/41aa312c-328f-4d87-8c3a-e8d156beffa0)
+![image](https://github.com/user-attachments/assets/41aa312c-328f-4d87-8c3a-e8d156beffa0) 
+
+
+create service.yml to expose the service 
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: static-website-service
+spec:
+  selector:
+    app: static-website
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
+```
+apply it with ``` kubectl apply -f <file_name>```
+
