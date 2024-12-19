@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-config
+  namespace: ivolve
+data:
+  MYSQL_DATABASE: emad_db
+  MYSQL_USER: ivolve_emad
