@@ -1,2 +1,1 @@
-#  Lab 33: Multi-container Applications
-
+# Lab 32: Configuring a MySQL Pod using ConfigMap and Secret
